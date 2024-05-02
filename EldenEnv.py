@@ -118,7 +118,7 @@ class EldenEnv(gym.Env):
         state = np.array([health, boss_health, mana])
     
         # FPS限制逻辑，确保每步间隔一定时间
-        time.sleep(1)  # 保证每个动作之间至少有1秒的间隔
+        time.sleep(0.2)  # 保证每个动作之间至少有0.2秒的间隔
         
         self.action_count += 1
         self.round_rewards.append(total_reward)
